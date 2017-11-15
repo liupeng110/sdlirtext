@@ -30,9 +30,10 @@ public class BaseLeftBackActivity extends BaseActivity {
 
     private void initSlidr() {
         SlidrConfig config=new SlidrConfig.Builder()
-                .position(SlidrPosition.LEFT)//滑动起始方向
+                .position(SlidrPosition.HORIZONTAL)//滑动起始方向
                 .edge(true)
-                .edgeSize(0.18f)//距离左边界占屏幕大小的18%
+                .distanceThreshold(0.60f)//需要滑动多少 才翻页
+                .edgeSize(0.60f)//距离左边界占屏幕大小的18%
                 .build();
         Slidr.attach(this,config);
     }
